@@ -81,7 +81,12 @@ jame.getOrder().forEach{ print($0)}
 jame.getOrder1().forEach{ print($0)}
 
 jame.getPrice().forEach{ print($0)}
+var result : Float = 0
+jame.getPrice().forEach{ result = result + $0}
+print (result)
+var totalPrice = shoppingCart.reduce(0, {$0 + $1.price})
 
+print ("Total Price = \(totalPrice)")
 address.forEach{ jame.addAddress($0)}
 jame.getAddress().forEach{ print($0)}
 jame.getAddress1().forEach{ print($0)}
